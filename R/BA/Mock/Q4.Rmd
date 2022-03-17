@@ -51,7 +51,7 @@ summarise(
 reduced_df
 ```
 ```{r}
-tidy_df <- reduced_df %>% gather("Dimension", "Mean", 2:4)
+tidy_df <- reduced_df %>% pivot_longer(cols = valence:dominance, names_to='Dimension',values_to = 'Mean')
 tidy_df
 ```
 
